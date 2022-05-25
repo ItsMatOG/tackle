@@ -1,0 +1,11 @@
+RegisterServerEvent('ItsMatOG:tryTackle')
+AddEventHandler('ItsMatOG:tryTackle', function(target)
+	TriggerClientEvent('ItsMatOG:getTackled', target, source)
+	TriggerClientEvent('ItsMatOG:playTackle', source)
+end)
+
+RegisterServerEvent('ItsMatOG:tryPush')
+AddEventHandler('ItsMatOG:tryPush', function(target)
+	TriggerClientEvent('ItsMatOG:getPushed', target, source)
+	TriggerClientEvent('ItsMatOG:playPush', source)
+end)
